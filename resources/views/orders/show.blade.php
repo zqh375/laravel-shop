@@ -170,13 +170,13 @@
                         purchase_units: [
                             {
                                 amount: {
-                                    value: {{ $order->total_amount }},
+                                    value: "11",
                                     currency_code: "USD",
                                     // 订单小计不是必填，不传递商品信息可以忽略
                                     breakdown: {
                                         item_total: {
                                             currency_code: "USD",
-                                            value: {{ $order->total_amount }}
+                                            value: "11"
                                         },
 
                                     }

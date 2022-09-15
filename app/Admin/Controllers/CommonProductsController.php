@@ -51,6 +51,11 @@ abstract class CommonProductsController extends AdminController
             }
         })->ajax('/admin/api/categories?is_directory=0');
         $form->image('image', '封面图片')->rules('required|image');
+        // 放在 SKU 下面
+        $form->hasMany('properties', '商品属性', function (Form\NestedForm $form) {
+            $form->text('name', '属性名')->rules('required');
+            $form->text('value', '属性值')->rules('required');
+        });
         $form->quill('description', '商品描述')->rules('required');
         $form->radio('on_sale', '上架')->options(['1' => '是', '0' => '否'])->default('0');
 

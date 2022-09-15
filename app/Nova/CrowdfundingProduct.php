@@ -2,16 +2,21 @@
 
 namespace App\Nova;
 
-use Hubertnnn\LaravelNova\Fields\DynamicSelect\DynamicSelect;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\HasOne;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+
 
 class CrowdfundingProduct extends Resource
 {
@@ -38,9 +43,10 @@ class CrowdfundingProduct extends Resource
         'id',
     ];
 
+    public static $group = '商品管理';
     public static function label()
     {
-        return "众筹商品列表";
+        return '众筹商品';
     }
 
     /**
@@ -52,26 +58,33 @@ class CrowdfundingProduct extends Resource
     public function fields(Request $request)
     {
         return [
-            Text::make('标题', 'title')->sortable()
-                ->rules('required', 'max:254'),
-            Text::make(__('描述'), 'description')->hideFromIndex()->sortable(),
-            Image::make(__('图片'), 'image')->hideFromIndex()->sortable(),
-            Text::make(__('是否在售'), 'on_sale')->sortable(),
-            Number::make('目标金额','price'),
-            Number::make('众筹目标金额',function (){
-                return $this->crowdfunding->target_amount??0;
+            ID::make(__('ID'), 'id')->sortable(),
+            Text::make('商品名称', 'title')->rules('required'),
+            BelongsTo::make('类目', 'category', Category::class)->searchable()->hideFromIndex(),
+            Image::make('图片','image')->disk('local')->preview(function ($url) {
+                // 如果 image 字段本身就已经是完整的 url 就直接返回
+                if (Str::startsWith($url, ['http://', 'https://'])) {
+                    return $url;
+                }
+                return Storage::disk('local')->url($url);
+            })->creationRules('required')
+                ->hideFromIndex(),
+            \Laravel\Nova\Fields\Trix::make('描述','description')->rules('required'),
+            Boolean::make('已上架','on_sale'),
+            HasOne::make('众筹信息','crowdfunding', CrowdfundingProduct::class)->inline()->requireChild(),
+            HasMany::make('商品sku','skus', ProductSku::class)->inline()->requireChild(),
+            Number::make('价格', 'price')->min(0),
+            Number::make('目前金额','crowdfunding.total_amount')->hideWhenUpdating()->hideWhenCreating(),
+            Select::make('类型','type')->options(function (){
+                return [
+                    \App\Models\Product::TYPE_CROWDFUNDING => '众筹商品',
+                ];
+            })->default(function () {
+                return \App\Models\Product::TYPE_CROWDFUNDING;
+            })->hideFromIndex()->hideFromDetail(),
+            Select::make('状态', function ($product) {
+                return \App\Models\CrowdfundingProduct::$statusMap[ $product->crowdfunding->status ?? ''] ?? '';
             }),
-            DateTime::make('结束时间',function (){
-                return $this->crowdfunding->end_at??'';
-            }),
-            Text::make('状态','status'),
-            Text::make('类型','type')->hideWhenCreating()->hideWhenUpdating()->hideFromDetail(),
-            DynamicSelect::make('类目', 'category_id')->options(function () {
-                return \App\Models\Category::where('is_directory',0)->pluck('name', 'id')->toArray();
-            }),
-            HasMany::make('sku商品', 'skus', ProductSku::class)->hideFromIndex()->inline(),
-
-
         ];
     }
 
@@ -117,5 +130,21 @@ class CrowdfundingProduct extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        return $query->where('type', \App\Models\Product::TYPE_CROWDFUNDING);
+    }
+
+    public static function relatableQuery(NovaRequest $request, $query)
+    {
+
+        $requestSegment = strtolower($request->segment(4));
+
+        if ($requestSegment === 'category') {
+            return $query->where('is_directory', false);
+        }
+        return $query;
     }
 }

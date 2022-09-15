@@ -30,13 +30,17 @@ class Product extends Resource
      * @var string
      */
     public static $title = 'title';
-
+    public static $group = '商品管理';
 
     public static function label()
     {
         return '商品管理';
     }
 
+    public static function indexQuery(NovaRequest $request, $query)
+    {
+        return $query->where('type', \App\Models\Product::TYPE_NORMAL);
+    }
 
     /**
      * The columns that should be searched.

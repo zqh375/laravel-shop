@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('title', $product->title)
 
-
 @section('content')
     <div class="row">
         <div class="col-lg-10 offset-lg-1">
@@ -17,7 +16,8 @@
                             @if($product->type === \App\Models\Product::TYPE_CROWDFUNDING)
                                 <div class="crowdfunding-info">
                                     <div class="have-text">已筹到</div>
-                                    <div class="total-amount"><span class="symbol">￥</span>{{ $product->crowdfunding->total_amount }}</div>
+                                    <div class="total-amount"><span class="symbol">￥</span>{{ $product->crowdfunding->total_amount }}
+                                    </div>
                                     <!-- 这里使用了 Bootstrap 的进度条组件 -->
                                     <div class="progress">
                                         <div class="progress-bar progress-bar-success progress-bar-striped"
@@ -51,7 +51,8 @@
                                     <div class="sold_count">累计销量 <span class="count">{{ $product->sold_count }}</span></div>
                                     <div class="review_count">累计评价 <span class="count">{{ $product->review_count }}</span></div>
                                     <div class="rating" title="评分 {{ $product->rating }}">评分
-                                        <span class="count">{{ str_repeat('★', floor($product->rating)) }}{{ str_repeat('☆', 5 - floor($product->rating)) }}</span>
+                                        <span
+                                            class="count">{{ str_repeat('★', floor($product->rating)) }}{{ str_repeat('☆', 5 - floor($product->rating)) }}</span>
                                     </div>
                                 </div>
                                 <!-- 原普通商品模块结束 -->
@@ -73,7 +74,8 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="cart_amount"><label>数量</label><input type="text" class="form-control form-control-sm" value="1"><span>件</span><span class="stock"></span></div>
+                            <div class="cart_amount"><label>数量</label><input type="text" class="form-control form-control-sm"
+                                                                             value="1"><span>件</span><span class="stock"></span></div>
                             <div class="buttons">
                                 @if($favored)
                                     <button class="btn btn-danger btn-disfavor">取消收藏</button>
@@ -102,23 +104,19 @@
                     </div>
                     <div class="product-detail">
                         <ul class="nav nav-tabs" role="tablist">
-
-                            <!--  bootstrap版本问题  增加data-bs-target="#product-reviews-tab" -->
                             <li class="nav-item">
-                                <a class="nav-link active" href="#product-detail-tab" data-bs-target="#product-detail-tab" aria-controls="product-detail-tab" role="tab" data-bs-toggle="tab" aria-selected="true">商品详情</a>
+                                <a class="nav-link active" href="#product-detail-tab" data-bs-target="#product-detail-tab"
+                                   aria-controls="product-detail-tab" role="tab" data-bs-toggle="tab" aria-selected="true">商品详情</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#product-reviews-tab" data-bs-target="#product-reviews-tab" aria-controls="product-reviews-tab" role="tab" data-bs-toggle="tab" aria-selected="false">用户评价</a>
+                                <a class="nav-link" href="#product-reviews-tab" data-bs-target="#product-reviews-tab"
+                                   aria-controls="product-reviews-tab" role="tab" data-bs-toggle="tab" aria-selected="false">用户评价</a>
                             </li>
-
-
-
                         </ul>
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="product-detail-tab">
                                 {!! $product->description !!}
                             </div>
-
                             <div role="tabpanel" class="tab-pane" id="product-reviews-tab">
                                 <!-- 评论列表开始 -->
                                 <table class="table table-bordered table-striped">
@@ -132,7 +130,6 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-
                                     @foreach($reviews as $review)
                                         <tr>
                                             <td>{{ $review->order->user->name }}</td>
@@ -153,7 +150,6 @@
         </div>
     </div>
 @endsection
-
 @section('scriptsAfterJs')
     <script>
         $(document).ready(function () {
@@ -162,6 +158,8 @@
                 $('.product-info .price span').text($(this).data('price'));
                 $('.product-info .stock').text('库存：' + $(this).data('stock') + '件');
             });
+
+            // 监听收藏按钮的点击事件
             $('.btn-favor').click(function () {
                 axios.post('{{ route('products.favor', ['product' => $product->id]) }}')
                     .then(function () {
@@ -169,12 +167,12 @@
                             .then(function () {  // 这里加了一个 then() 方法
                                 location.reload();
                             });
-                    }, function(error) {
+                    }, function (error) {
                         if (error.response && error.response.status === 401) {
                             swal('请先登录', '', 'error');
-                        }  else if (error.response && error.response.data.msg) {
+                        } else if (error.response && error.response.data.msg) {
                             swal(error.response.data.msg, '', 'error');
-                        }  else {
+                        } else {
                             swal('系统错误', '', 'error');
                         }
                     });
@@ -189,21 +187,21 @@
                             });
                     });
             });
+
             // 加入购物车按钮点击事件
             $('.btn-add-to-cart').click(function () {
 
                 // 请求加入购物车接口
                 axios.post('{{ route('cart.add') }}', {
-
-                    //TODO:为何需要checked才能生效
                     sku_id: $('.sku-btn input[name=skus]:checked').val(),
                     amount: $('.cart_amount input').val(),
                 })
-                    .then(function () {
+                    .then(function () { // 请求成功执行此回调
                         swal('加入购物车成功', '', 'success')
-                            .then(function() {
+                            .then(function () {
                                 location.href = '{{ route('cart.index') }}';
                             });
+                        ;
                     }, function (error) { // 请求失败执行此回调
                         if (error.response.status === 401) {
 
@@ -216,7 +214,7 @@
                             var html = '<div>';
                             _.each(error.response.data.errors, function (errors) {
                                 _.each(errors, function (error) {
-                                    html += error+'<br>';
+                                    html += error + '<br>';
                                 })
                             });
                             html += '</div>';
@@ -228,6 +226,7 @@
                         }
                     })
             });
+
             // 参与众筹 按钮点击事件
             $('.btn-crowdfunding').click(function () {
                 // 判断是否选中 SKU
@@ -303,7 +302,5 @@
             });
 
         });
-
-
     </script>
 @endsection

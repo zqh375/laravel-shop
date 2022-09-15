@@ -4,10 +4,15 @@ namespace App\Nova;
 
 use Hubertnnn\LaravelNova\Fields\DynamicSelect\DynamicSelect;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Product extends Resource
@@ -52,20 +57,40 @@ class Product extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
-            Text::make('标题', 'title')->sortable()
-                ->rules('required', 'max:254'),
-            Text::make(__('描述'), 'description')->hideFromIndex()->sortable(),
-            Image::make(__('图片'), 'image')->hideFromIndex()->sortable(),
-            Text::make(__('是否在售'), 'on_sale')->sortable(),
-            Text::make(__('评论星数'), 'rating')->hideFromIndex()->sortable(),
-            Text::make(__('库粗数量'), 'sold_count')->sortable(),
-            Text::make(__('评论数量'), 'review_count')->hideFromIndex()->sortable(),
-            Text::make(__('价格'), 'price')->sortable(),
-            HasMany::make('sku商品', 'skus', ProductSku::class)->hideFromIndex()->inline(),
+            ID::make()->sortable(),
+
+            Text::make('商品名称', 'title')
+                ->sortable()
+                ->rules('required', 'max:255'),
+
+            Text::make('商品长标题', 'long_title')
+                ->sortable()
+                ->rules('required'),
+            Number::make('价格', 'price')->hideFromIndex(),
+
+            Image::make('封面图片', 'image')
+                ->thumbnail(function ($value, $disk) {
+                    return $value
+                        ? Str::startsWith($value, 'http') || Str::startsWith($value, 'https')
+                            ? $value
+                            : Storage::disk('public')->url($value)
+                        : null;
+                }),
+
+            Trix::make('商品描述', 'description')
+                ->rules('required')
+                ->alwaysShow(),
+
             DynamicSelect::make('类目', 'category_id')->options(function () {
                 return \App\Models\Category::where('is_directory',0)->pluck('name', 'id')->toArray();
             }),
+            Select::make('已上架', 'on_sale')->options([
+                '1' => '是',
+                '0' => '否',
+            ])->displayUsingLabels()->rules('required'),
+
+            HasMany::make('商品SKU', 'skus', ProductSku::class)->hideFromIndex()->inline(),
+
         ];
     }
 

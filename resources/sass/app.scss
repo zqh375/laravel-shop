@@ -57,11 +57,17 @@ body {
         }
     }
 }
+@mixin product-list {
+    .products-list {
+        // 将之前 .products-list 内容移动到这里
+    }
+}
 
-.products-index-page {
+.products-index-page.products-favorites-page {
     .pagination {
         margin-right: 5px;
     }
+    @include product-list;
     .search-form {
         padding: 0 5px 10px;
         margin-bottom: 10px;
@@ -284,6 +290,15 @@ body {
     }
     .product-description img {
         max-width: 100%;
+    }
+    .similar-products {
+        @include product-list;
+        .title {
+            font-weight: normal;
+        }
+        .price {
+            background-color: unset;
+        }
     }
 }
 .cart-index-page {

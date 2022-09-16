@@ -1,0 +1,668 @@
+=> [
+     "[34mtook[39m" => [35m29[39m,
+     "[34mtimed_out[39m" => [36mfalse[39m,
+     "[34m_shards[39m" => [
+       "[34mtotal[39m" => [35m1[39m,
+       "[34msuccessful[39m" => [35m1[39m,
+       "[34mskipped[39m" => [35m0[39m,
+       "[34mfailed[39m" => [35m0[39m,
+     ],
+     "[34mhits[39m" => [
+       "[34mtotal[39m" => [
+         "[34mvalue[39m" => [35m6[39m,
+         "[34mrelation[39m" => "[32meq[39m",
+       ],
+       "[34mmax_score[39m" => [33m3.673972[39m,
+       "[34mhits[39m" => [
+         [
+           "[34m_index[39m" => "[32mproducts[39m",
+           "[34m_type[39m" => "[32m_doc[39m",
+           "[34m_id[39m" => "[32m37[39m",
+           "[34m_score[39m" => [33m3.673972[39m,
+           "[34m_source[39m" => [
+             "[34mid[39m" => [35m37[39m,
+             "[34mtype[39m" => "[32mnormal[39m",
+             "[34mcategory_id[39m" => [35m13[39m,
+             "[34mtitle[39m" => "[32mAData/威刚 8G DDR4 2400 (XPG 单条） [39m",
+             "[34mlong_title[39m" => "[32mADATA/威刚 8G 16G 3200 3000 2666 2400游戏台式机内存条DDR4套条[39m",
+             "[34mon_sale[39m" => [36mtrue[39m,
+             "[34mrating[39m" => [33m5.0[39m,
+             "[34msold_count[39m" => [35m0[39m,
+             "[34mreview_count[39m" => [35m0[39m,
+             "[34mprice[39m" => "[32m489.00[39m",
+             "[34mcategory[39m" => [
+               "[32m电脑配件[39m",
+               "[32m内存[39m",
+             ],
+             "[34mcategory_path[39m" => "[32m-10-[39m",
+             "[34mdescription[39m" => "",
+             "[34mskus[39m" => [
+               [
+                 "[34mtitle[39m" => "[32m8GB DDR4 2400[39m",
+                 "[34mdescription[39m" => "[32m8GB DDR4 2400 XPG单条[39m",
+                 "[34mprice[39m" => "[32m489.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m4GB 万紫千红 DDR4 2133[39m",
+                 "[34mdescription[39m" => "[32m4GB 万紫千红 DDR4 2133[39m",
+                 "[34mprice[39m" => "[32m489.00[39m",
+               ],
+             ],
+             "[34mproperties[39m" => [
+               [
+                 "[34mname[39m" => "[32m品牌名称[39m",
+                 "[34mvalue[39m" => "[32m威刚[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m传输类型[39m",
+                 "[34mvalue[39m" => "[32mDDR4[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m4GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m8GB[39m",
+               ],
+             ],
+           ],
+         ],
+         [
+           "[34m_index[39m" => "[32mproducts[39m",
+           "[34m_type[39m" => "[32m_doc[39m",
+           "[34m_id[39m" => "[32m41[39m",
+           "[34m_score[39m" => [33m0.20310868[39m,
+           "[34m_source[39m" => [
+             "[34mid[39m" => [35m41[39m,
+             "[34mtype[39m" => "[32mnormal[39m",
+             "[34mcategory_id[39m" => [35m13[39m,
+             "[34mtitle[39m" => "[32mSamsung/三星 8G DDR4 24001111111[39m",
+             "[34mlong_title[39m" => "[32m三星内存条8g DDR4 2400 2133 2666 笔记本内存条16g四代吃鸡内存[39m",
+             "[34mon_sale[39m" => [36mtrue[39m,
+             "[34mrating[39m" => [33m5.0[39m,
+             "[34msold_count[39m" => [35m0[39m,
+             "[34mreview_count[39m" => [35m0[39m,
+             "[34mprice[39m" => "[32m539.00[39m",
+             "[34mcategory[39m" => [
+               "[32m电脑配件[39m",
+               "[32m内存[39m",
+             ],
+             "[34mcategory_path[39m" => "[32m-10-[39m",
+             "[34mdescription[39m" => "",
+             "[34mskus[39m" => [
+               [
+                 "[34mtitle[39m" => "[32mDDR4 2400 8G11[39m",
+                 "[34mdescription[39m" => "[32mDDR4 2400 8G[39m",
+                 "[34mprice[39m" => "[32m539.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR4 2133 8G[39m",
+                 "[34mdescription[39m" => "[32mDDR4 2133 8G[39m",
+                 "[34mprice[39m" => "[32m539.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR4 2666 8G[39m",
+                 "[34mdescription[39m" => "[32mDDR4 2666 8G[39m",
+                 "[34mprice[39m" => "[32m589.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR4 2400 16G[39m",
+                 "[34mdescription[39m" => "[32mDDR4 2400 16G[39m",
+                 "[34mprice[39m" => "[32m1199.00[39m",
+               ],
+             ],
+             "[34mproperties[39m" => [
+               [
+                 "[34mname[39m" => "[32m品牌名称[39m",
+                 "[34mvalue[39m" => "[32m三星[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m传输类型[39m",
+                 "[34mvalue[39m" => "[32mDDR4[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m8GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m16GB[39m",
+               ],
+             ],
+           ],
+         ],
+         [
+           "[34m_index[39m" => "[32mproducts[39m",
+           "[34m_type[39m" => "[32m_doc[39m",
+           "[34m_id[39m" => "[32m38[39m",
+           "[34m_score[39m" => [33m0.16177067[39m,
+           "[34m_source[39m" => [
+             "[34mid[39m" => [35m38[39m,
+             "[34mtype[39m" => "[32mnormal[39m",
+             "[34mcategory_id[39m" => [35m13[39m,
+             "[34mtitle[39m" => "[32mKingston/金士顿 金士顿DDR3 1600 8GB[39m",
+             "[34mlong_title[39m" => "[32mKingston/金士顿 DDR3 1600 8G 台式机电脑 三代 内存条 兼容1333[39m",
+             "[34mon_sale[39m" => [36mtrue[39m,
+             "[34mrating[39m" => [33m5.0[39m,
+             "[34msold_count[39m" => [35m0[39m,
+             "[34mreview_count[39m" => [35m0[39m,
+             "[34mprice[39m" => "[32m239.00[39m",
+             "[34mcategory[39m" => [
+               "[32m电脑配件[39m",
+               "[32m内存[39m",
+             ],
+             "[34mcategory_path[39m" => "[32m-10-[39m",
+             "[34mdescription[39m" => "",
+             "[34mskus[39m" => [
+               [
+                 "[34mtitle[39m" => "[32mDDR3 1600 8G[39m",
+                 "[34mdescription[39m" => "[32mDDR3 1600 8G[39m",
+                 "[34mprice[39m" => "[32m439.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR3 1600 4G[39m",
+                 "[34mdescription[39m" => "[32mDDR3 1600 4G[39m",
+                 "[34mprice[39m" => "[32m239.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR3 1333 4G[39m",
+                 "[34mdescription[39m" => "[32mDDR3 1333 4G[39m",
+                 "[34mprice[39m" => "[32m259.00[39m",
+               ],
+             ],
+             "[34mproperties[39m" => [
+               [
+                 "[34mname[39m" => "[32m品牌名称[39m",
+                 "[34mvalue[39m" => "[32m金士顿[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m传输类型[39m",
+                 "[34mvalue[39m" => "[32mDDR3[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m4GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m8GB[39m",
+               ],
+             ],
+           ],
+         ],
+         [
+           "[34m_index[39m" => "[32mproducts[39m",
+           "[34m_type[39m" => "[32m_doc[39m",
+           "[34m_id[39m" => "[32m36[39m",
+           "[34m_score[39m" => [33m0.147489[39m,
+           "[34m_source[39m" => [
+             "[34mid[39m" => [35m36[39m,
+             "[34mtype[39m" => "[32mnormal[39m",
+             "[34mcategory_id[39m" => [35m13[39m,
+             "[34mtitle[39m" => "[32mKingston/金士顿 HX424C15FB/8[39m",
+             "[34mlong_title[39m" => "[32m金士顿 骇客神条 ddr4 2400 8g 台式机 电脑 四代内存条 吃鸡内存[39m",
+             "[34mon_sale[39m" => [36mtrue[39m,
+             "[34mrating[39m" => [33m5.0[39m,
+             "[34msold_count[39m" => [35m0[39m,
+             "[34mreview_count[39m" => [35m0[39m,
+             "[34mprice[39m" => "[32m399.00[39m",
+             "[34mcategory[39m" => [
+               "[32m电脑配件[39m",
+               "[32m内存[39m",
+             ],
+             "[34mcategory_path[39m" => "[32m-10-[39m",
+             "[34mdescription[39m" => "",
+             "[34mskus[39m" => [
+               [
+                 "[34mtitle[39m" => "[32m8GB 黑色[39m",
+                 "[34mdescription[39m" => "[32m8GB 2400 DDR4 黑色[39m",
+                 "[34mprice[39m" => "[32m549.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m8GB 绿色[39m",
+                 "[34mdescription[39m" => "[32m8GB 2400 DDR4 绿色[39m",
+                 "[34mprice[39m" => "[32m529.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m16GB[39m",
+                 "[34mdescription[39m" => "[32m2400 16GB[39m",
+                 "[34mprice[39m" => "[32m1299.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m4GB[39m",
+                 "[34mdescription[39m" => "[32m2400 4GB[39m",
+                 "[34mprice[39m" => "[32m399.00[39m",
+               ],
+             ],
+             "[34mproperties[39m" => [
+               [
+                 "[34mname[39m" => "[32m品牌名称[39m",
+                 "[34mvalue[39m" => "[32m金士顿[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m8GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m传输类型[39m",
+                 "[34mvalue[39m" => "[32mDDR4[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m4GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m16GB[39m",
+               ],
+             ],
+           ],
+         ],
+         [
+           "[34m_index[39m" => "[32mproducts[39m",
+           "[34m_type[39m" => "[32m_doc[39m",
+           "[34m_id[39m" => "[32m40[39m",
+           "[34m_score[39m" => [33m0.147489[39m,
+           "[34m_source[39m" => [
+             "[34mid[39m" => [35m40[39m,
+             "[34mtype[39m" => "[32mnormal[39m",
+             "[34mcategory_id[39m" => [35m13[39m,
+             "[34mtitle[39m" => "[32m美商海盗船 LPX系列 [39m",
+             "[34mlong_title[39m" => "[32m美商海盗船复仇者DDR4 8G 2400内存条电脑台式主机吃鸡4G16G 3000[39m",
+             "[34mon_sale[39m" => [36mtrue[39m,
+             "[34mrating[39m" => [33m5.0[39m,
+             "[34msold_count[39m" => [35m0[39m,
+             "[34mreview_count[39m" => [35m0[39m,
+             "[34mprice[39m" => "[32m359.00[39m",
+             "[34mcategory[39m" => [
+               "[32m电脑配件[39m",
+               "[32m内存[39m",
+             ],
+             "[34mcategory_path[39m" => "[32m-10-[39m",
+             "[34mdescription[39m" => "",
+             "[34mskus[39m" => [
+               [
+                 "[34mtitle[39m" => "[32mDDR4 8G 2400[39m",
+                 "[34mdescription[39m" => "[32mDDR4 8G 2400[39m",
+                 "[34mprice[39m" => "[32m519.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR4 4G 2400[39m",
+                 "[34mdescription[39m" => "[32mDDR4 4G 2400[39m",
+                 "[34mprice[39m" => "[32m359.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR4 8G*2 2400[39m",
+                 "[34mdescription[39m" => "[32mDDR4 8G*2 2400[39m",
+                 "[34mprice[39m" => "[32m1279.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32mDDR4 16G 2400[39m",
+                 "[34mdescription[39m" => "[32mDDR4 16G 2400[39m",
+                 "[34mprice[39m" => "[32m1279.00[39m",
+               ],
+             ],
+             "[34mproperties[39m" => [
+               [
+                 "[34mname[39m" => "[32m品牌名称[39m",
+                 "[34mvalue[39m" => "[32m海盗船[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m16GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m8GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m4GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m传输类型[39m",
+                 "[34mvalue[39m" => "[32mDDR4[39m",
+               ],
+             ],
+           ],
+         ],
+         [
+           "[34m_index[39m" => "[32mproducts[39m",
+           "[34m_type[39m" => "[32m_doc[39m",
+           "[34m_id[39m" => "[32m39[39m",
+           "[34m_score[39m" => [33m0.1432728[39m,
+           "[34m_source[39m" => [
+             "[34mid[39m" => [35m39[39m,
+             "[34mtype[39m" => "[32mnormal[39m",
+             "[34mcategory_id[39m" => [35m13[39m,
+             "[34mtitle[39m" => "[32m影驰 Gamer DDR4-2133 8G [39m",
+             "[34mlong_title[39m" => "[32m影驰 Gamer DDR4-2400/3000 8G/8G*2 单条/套条 台式机呼吸内存条[39m",
+             "[34mon_sale[39m" => [36mtrue[39m,
+             "[34mrating[39m" => [33m5.0[39m,
+             "[34msold_count[39m" => [35m0[39m,
+             "[34mreview_count[39m" => [35m0[39m,
+             "[34mprice[39m" => "[32m489.00[39m",
+             "[34mcategory[39m" => [
+               "[32m电脑配件[39m",
+               "[32m内存[39m",
+             ],
+             "[34mcategory_path[39m" => "[32m-10-[39m",
+             "[34mdescription[39m" => "",
+             "[34mskus[39m" => [
+               [
+                 "[34mtitle[39m" => "[32m16GB 3000[39m",
+                 "[34mdescription[39m" => "[32m16GB 3000 8GB*2[39m",
+                 "[34mprice[39m" => "[32m1199.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m16GB 3600[39m",
+                 "[34mdescription[39m" => "[32m16GB 3600 8GB*2[39m",
+                 "[34mprice[39m" => "[32m1379.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m8GB 2400[39m",
+                 "[34mdescription[39m" => "[32m8GB 2400 DDR4[39m",
+                 "[34mprice[39m" => "[32m489.00[39m",
+               ],
+               [
+                 "[34mtitle[39m" => "[32m8GB 3000[39m",
+                 "[34mdescription[39m" => "[32m8GB 3000 DDR4[39m",
+                 "[34mprice[39m" => "[32m519.00[39m",
+               ],
+             ],
+             "[34mproperties[39m" => [
+               [
+                 "[34mname[39m" => "[32m品牌名称[39m",
+                 "[34mvalue[39m" => "[32m影驰[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m传输类型[39m",
+                 "[34mvalue[39m" => "[32mDDR4[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m8GB[39m",
+               ],
+               [
+                 "[34mname[39m" => "[32m内存容量[39m",
+                 "[34mvalue[39m" => "[32m16GB[39m",
+               ],
+             ],
+           ],
+         ],
+       ],
+     ],
+     "[34maggregations[39m" => [
+       "[34mproperties[39m" => [
+         "[34mdoc_count[39m" => [35m26[39m,
+         "[34mproperties[39m" => [
+           "[34mdoc_count_error_upper_bound[39m" => [35m0[39m,
+           "[34msum_other_doc_count[39m" => [35m0[39m,
+           "[34mbuckets[39m" => [
+             [
+               "[34mkey[39m" => "[32m内存容量[39m",
+               "[34mdoc_count[39m" => [35m14[39m,
+             ],
+             [
+               "[34mkey[39m" => "[32m传输类型[39m",
+               "[34mdoc_count[39m" => [35m6[39m,
+             ],
+             [
+               "[34mkey[39m" => "[32m品牌名称[39m",
+               "[34mdoc_count[39m" => [35m6[39m,
+             ],
+           ],
+         ],
+       ],
+     ],
+   ]
+
+
+                   SSUUMMMMAARRYY OOFF LLEESSSS CCOOMMMMAANNDDSS
+
+      Commands marked with * may be preceded by a number, _N.
+      Notes in parentheses indicate the behavior if _N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MMOOVVIINNGG
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or _N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or _N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or _N lines).
+  b  ^B  ESC-v      *  Backward one window (or _N lines).
+  z                 *  Forward  one window (and set window to _N).
+  w                 *  Backward one window (and set window to _N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to _N).
+  u  ^U             *  Backward one half-window (and set half-window to _N).
+  ESC-)  RightArrow *  Right one half screen width (or _N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or _N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SSEEAARRCCHHIINNGG
+
+  /_p_a_t_t_e_r_n          *  Search forward for (_N-th) matching line.
+  ?_p_a_t_t_e_r_n          *  Search backward for (_N-th) matching line.
+  n                 *  Repeat previous search (for _N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  &_p_a_t_t_e_r_n          *  Display only matching lines
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+ ---------------------------------------------------------------------------
+
+                           JJUUMMPPIINNGG
+
+  g  <  ESC-<       *  Go to first line in file (or line _N).
+  G  >  ESC->       *  Go to last line in file (or line _N).
+  p  %              *  Go to beginning of file (or _N percent into file).
+  t                 *  Go to the (_N-th) next tag.
+  T                 *  Go to the (_N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F _<_c_1_> _<_c_2_>  *  Find close bracket _<_c_2_>.
+  ESC-^B _<_c_1_> _<_c_2_>  *  Find open bracket _<_c_1_> 
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket 
+          matching the (_N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket 
+          matching the (_N-th) close bracket in the bottom line.
+
+  m_<_l_e_t_t_e_r_>            Mark the current top line with <letter>.
+  M_<_l_e_t_t_e_r_>            Mark the current bottom line with <letter>.
+  '_<_l_e_t_t_e_r_>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+  ESC-M_<_l_e_t_t_e_r_>        Clear a mark.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+                        CCHHAANNGGIINNGG FFIILLEESS
+
+  :e [_f_i_l_e]            Examine a new file.
+  ^X^V                 Same as :e.
+  :n                *  Examine the (_N-th) next file from the command line.
+  :p                *  Examine the (_N-th) previous file from the command line.
+  :x                *  Examine the first (or _N-th) file from the command line.
+  :d                   Delete the current file from the command line list.
+  =  ^G  :f            Print current file name.
+ ---------------------------------------------------------------------------
+
+                    MMIISSCCEELLLLAANNEEOOUUSS CCOOMMMMAANNDDSS
+
+  -_<_f_l_a_g_>              Toggle a command line option [see OPTIONS below].
+  --_<_n_a_m_e_>             Toggle a command line option, by name.
+  __<_f_l_a_g_>              Display the setting of a command line option.
+  ___<_n_a_m_e_>             Display the setting of an option, by name.
+  +_c_m_d                 Execute the less cmd each time a new file is examined.
+
+  !_c_o_m_m_a_n_d             Execute the shell command with $SHELL.
+  |XX_c_o_m_m_a_n_d            Pipe file between current pos & mark XX to shell command.
+  s _f_i_l_e               Save input to a file.
+  v                    Edit the current file with $VISUAL or $EDITOR.
+  V                    Print version number of "less".
+ ---------------------------------------------------------------------------
+
+                           OOPPTTIIOONNSS
+
+        Most options may be changed either on the command line,
+        or from within less by using the - or -- command.
+        Options may be given in one of two forms: either a single
+        character preceded by a -, or a name preceded by --.
+
+  -?  ........  --help
+                  Display help (from command line).
+  -a  ........  --search-skip-screen
+                  Search skips current screen.
+  -A  ........  --SEARCH-SKIP-SCREEN
+                  Search starts just after target line.
+  -b [_N]  ....  --buffers=[_N]
+                  Number of buffers.
+  -B  ........  --auto-buffers
+                  Don't automatically allocate buffers for pipes.
+  -c  ........  --clear-screen
+                  Repaint by clearing rather than scrolling.
+  -d  ........  --dumb
+                  Dumb terminal.
+  -D [_x_n_._n]  .  --color=_x_n_._n
+                  Set screen colors. (MS-DOS only)
+  -e  -E  ....  --quit-at-eof  --QUIT-AT-EOF
+                  Quit at end of file.
+  -f  ........  --force
+                  Force open non-regular files.
+  -F  ........  --quit-if-one-screen
+                  Quit if entire file fits on first screen.
+  -g  ........  --hilite-search
+                  Highlight only last match for searches.
+  -G  ........  --HILITE-SEARCH
+                  Don't highlight any matches for searches.
+  -h [_N]  ....  --max-back-scroll=[_N]
+                  Backward scroll limit.
+  -i  ........  --ignore-case
+                  Ignore case in searches that do not contain uppercase.
+  -I  ........  --IGNORE-CASE
+                  Ignore case in all searches.
+  -j [_N]  ....  --jump-target=[_N]
+                  Screen position of target lines.
+  -J  ........  --status-column
+                  Display a status column at left edge of screen.
+  -k [_f_i_l_e]  .  --lesskey-file=[_f_i_l_e]
+                  Use a lesskey file.
+  -K  ........  --quit-on-intr
+                  Exit less in response to ctrl-C.
+  -L  ........  --no-lessopen
+                  Ignore the LESSOPEN environment variable.
+  -m  -M  ....  --long-prompt  --LONG-PROMPT
+                  Set prompt style.
+  -n  -N  ....  --line-numbers  --LINE-NUMBERS
+                  Don't use line numbers.
+  -o [_f_i_l_e]  .  --log-file=[_f_i_l_e]
+                  Copy to log file (standard input only).
+  -O [_f_i_l_e]  .  --LOG-FILE=[_f_i_l_e]
+                  Copy to log file (unconditionally overwrite).
+  -p [_p_a_t_t_e_r_n]  --pattern=[_p_a_t_t_e_r_n]
+                  Start at pattern (from command line).
+  -P [_p_r_o_m_p_t]   --prompt=[_p_r_o_m_p_t]
+                  Define new prompt.
+  -q  -Q  ....  --quiet  --QUIET  --silent --SILENT
+                  Quiet the terminal bell.
+  -r  -R  ....  --raw-control-chars  --RAW-CONTROL-CHARS
+                  Output "raw" control characters.
+  -s  ........  --squeeze-blank-lines
+                  Squeeze multiple blank lines.
+  -S  ........  --chop-long-lines
+                  Chop (truncate) long lines rather than wrapping.
+  -t [_t_a_g]  ..  --tag=[_t_a_g]
+                  Find a tag.
+  -T [_t_a_g_s_f_i_l_e] --tag-file=[_t_a_g_s_f_i_l_e]
+                  Use an alternate tags file.
+  -u  -U  ....  --underline-special  --UNDERLINE-SPECIAL
+                  Change handling of backspaces.
+  -V  ........  --version
+                  Display the version number of "less".
+  -w  ........  --hilite-unread
+                  Highlight first new line after forward-screen.
+  -W  ........  --HILITE-UNREAD
+                  Highlight first new line after any forward movement.
+  -x [_N[,...]]  --tabs=[_N[,...]]
+                  Set tab stops.
+  -X  ........  --no-init
+                  Don't use termcap init/deinit strings.
+  -y [_N]  ....  --max-forw-scroll=[_N]
+                  Forward scroll limit.
+  -z [_N]  ....  --window=[_N]
+                  Set size of window.
+  -" [_c[_c]]  .  --quotes=[_c[_c]]
+                  Set shell quote characters.
+  -~  ........  --tilde
+                  Don't display tildes after end of file.
+  -# [_N]  ....  --shift=[_N]
+                  Horizontal scroll amount (0 = one half screen width)
+                --follow-name
+                  The F command changes files if the input file is renamed.
+                --mouse
+                  Enable mouse input.
+                --no-keypad
+                  Don't send termcap keypad init/deinit strings.
+                --no-histdups
+                  Remove duplicates from command history.
+                --rscroll=C
+                  Set the character used to mark truncated lines.
+                --save-marks
+                  Retain marks across invocations of less.
+                --use-backslash
+                  Subsequent options use backslash as escape char.
+                --wheel-lines=N
+                  Each click of the mouse wheel moves N lines.
+
+
+ ---------------------------------------------------------------------------
+
+                          LLIINNEE EEDDIITTIINNGG
+
+        These keys can be used to edit text being entered 
+        on the "command line" at the bottom of the screen.
+
+ RightArrow ..................... ESC-l ... Move cursor right one character.
+ LeftArrow ...................... ESC-h ... Move cursor left one character.
+ ctrl-RightArrow  ESC-RightArrow  ESC-w ... Move cursor right one word.
+ ctrl-LeftArrow   ESC-LeftArrow   ESC-b ... Move cursor left one word.
+ HOME ........................... ESC-0 ... Move cursor to start of line.
+ END ............................ ESC-$ ... Move cursor to end of line.
+ BACKSPACE ................................ Delete char to left of cursor.
+ DELETE ......................... ESC-x ... Delete char under cursor.
+ ctrl-BACKSPACE   ESC-BACKSPACE ........... Delete word to left of cursor.
+ ctrl-DELETE .... ESC-DELETE .... ESC-X ... Delete word under cursor.
+ ctrl-U ......... ESC (MS-DOS only) ....... Delete entire line.
+ UpArrow ........................ ESC-k ... Retrieve previous command line.
+ DownArrow ...................... ESC-j ... Retrieve next command line.
+ TAB ...................................... Complete filename & cycle.
+ SHIFT-TAB ...................... ESC-TAB   Complete filename & reverse cycle.
+ ctrl-L ................................... Complete filename, list all.
+
+

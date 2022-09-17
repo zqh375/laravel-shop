@@ -13,6 +13,7 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
+        'create_order/*/paypal',
         'payment/alipay/notify',
         'webhook',
         'installments/alipay/notify',

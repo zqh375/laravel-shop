@@ -6,10 +6,10 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use DB;
 
 class InviteEmail extends Notification
 {
-    use Queueable;
 
 
     protected $name;
@@ -20,7 +20,6 @@ class InviteEmail extends Notification
      */
     public function __construct($name)
     {
-        //
         $this->name=$name;
     }
 

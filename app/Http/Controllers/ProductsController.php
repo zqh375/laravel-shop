@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmail;
+use App\Notifications\InviteEmail;
 use App\SearchBuilders\ProductSearchBuilder;
 use Illuminate\Http\Request;
 use App\Models\Product;

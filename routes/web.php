@@ -39,6 +39,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('payment/{order}/alipay', 'PaymentController@payByAlipay')->name('payment.alipay');
    // Route::post('payment/{order}/paypal', 'PaymentController@payByPaypal')->name('payment.paypal');
 
+
+
     Route::get('payment/alipay/return', 'PaymentController@alipayReturn')->name('payment.alipay.return');
 
 
@@ -65,6 +67,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
 
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
+Route::post('/create_order/{orderId}/paypal', 'PaymentController@createOrderByPaypal');
 Route::post('payment/alipay/notify', 'PaymentController@alipayNotify')->name('payment.alipay.notify');
 Route::get('alipay', function() {
     return app('alipay')->web([

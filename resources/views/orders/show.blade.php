@@ -211,42 +211,11 @@
                 // set up the transaction
                 createOrder: (data, actions) => {
                     // pass in any options from the v2 orders create call:
-                    // https://developer.paypal.com/api/orders/v2/#orders-create-request-body
-                    const createOrderPayload = {
-                        purchase_units: [
-                            {
-                                amount: {
-                                    value: {{ $order->total_amount }},
-                                    currency_code: "USD",
-                                    // 订单小计不是必填，不传递商品信息可以忽略
-                                    breakdown: {
-                                        item_total: {
-                                            currency_code: "USD",
-                                            value: {{ $order->total_amount }}
-                                        },
-
-                                    }
-                                },
-                                // 设置订单商品信息时需要传递商品小计参数amount.breakdown
-                                items: [
-                                    {
-                                        name: "神龙斗士 - uytfuy1, 35216",
-                                        unit_amount: {
-                                            currency_code: "USD",
-                                            value: "11.00"
-                                        },
-                                        quantity: 1,
-                                    },
-                                ],
-                                invoice_id: '{{'my-order-' . $order->id}}',
-                            },
-                        ],
-                        payer: {
-                            email_address: "sb-pdlgx20548531@personal.example.com"
-                        },
-                    }
-
-                    return actions.order.create(createOrderPayload)
+                    return fetch("/create_order/{{$order->id}}/paypal", {
+                        method: "post",
+                    })
+                        .then((response) => response.json())
+                        .then((order) => order.id);
                 },
 
                 // finalize the transaction

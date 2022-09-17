@@ -34,6 +34,39 @@ class PaymentController extends Controller
     }
 
 
+    /**
+     *
+     * 创建paypal订单
+     * @param Order $order
+     * @param Request $request
+     * @return mixed
+     * @throws InvalidRequestException
+     *
+     */
+    public function createOrderByPaypal($orderId, Request $request)
+    {
+        $order=Order::findOrFail($orderId);
+        if ($order->paid_at) {
+            throw new InvalidRequestException('订单已支付');
+        }
+        $purchaseUnits[] = [
+            'amount' => [
+                'currency_code' => 'USD',
+                'value'         => $order->total_amount,
+            ],
+            'invoice_id'=>'my-order-' . $order->id,
+        ];
+        $provider = new PayPalClient;
+        $provider->getAccessToken();
+        $response = $provider->createOrder([
+            'intent'         => 'CAPTURE',
+            'purchase_units' => $purchaseUnits
+        ]);
+        \Log::info('PAYPAL_CREATE_ORDER', [$response]);
+        return $response;
+    }
+
+
     public function thankyou(Request $request)
     {
         return view('pages.success', ['msg' => '付款成功']);
